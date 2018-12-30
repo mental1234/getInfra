@@ -1,6 +1,7 @@
 package main
 
 import (
+	L "./lib"
 	"fmt"
 	"os"
 	"github.com/aws/aws-sdk-go/aws"
@@ -37,5 +38,6 @@ func main() {
 	} else {
 		fmt.Println(result)
 	}
-
+	L.ReadFile()//"/home/ramon/Projects/QuetzalProject/config/config.json")
+	//fmt.Println(L.ReadFile())//"/home/ramon/Projects/QuetzalProject/config/config.json"))
 }
