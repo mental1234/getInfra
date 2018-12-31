@@ -14,6 +14,7 @@ func main() {
 	key := os.Args[2]
 	key = "tag:" + key
 	value := os.Args[3]
+	//file := os.Args[1]
 	// Session
 	sess, err := session.NewSession(&aws.Config{
 		Region: aws.String(region)},
@@ -38,6 +39,7 @@ func main() {
 	} else {
 		fmt.Println(result)
 	}
-	L.ReadFile()//"/home/ramon/Projects/QuetzalProject/config/config.json")
-	//fmt.Println(L.ReadFile())//"/home/ramon/Projects/QuetzalProject/config/config.json"))
+	X, Y, Z := L.ReadFile("/home/ramon/Projects/QuetzalProject/config/config.json")
+	fmt.Println(X, Y, Z)
+
 }

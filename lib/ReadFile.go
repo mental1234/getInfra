@@ -9,13 +9,13 @@ import (
 
 
 type Config struct {
+	Region  []string
 	Keys	[]string
 	Values  []string
 }
 
-
-func ReadFile() {
-	file, _ := os.Open("/home/ramon/Projects/QuetzalProject/config/config.json")
+func ReadFile(argFile string) ([]string, []string, []string) {
+	file, _ := os.Open(argFile)
 	defer file.Close()
 	decoder := json.NewDecoder(file)
 	configuration := Config{}
@@ -23,6 +23,5 @@ func ReadFile() {
 	if err != nil {
 		fmt.Println("error: ", err)
 	}
-	fmt.Println(configuration.Keys)
-	fmt.Println(configuration.Values)
+	return configuration.Region, configuration.Keys, configuration.Values
 }
