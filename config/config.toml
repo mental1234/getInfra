@@ -1,5 +1,9 @@
-Vendor = aws
+[Tags]
 
-[EC2]
-Region = "us-east-1"
+  [tags.alpha]
+  Key = "Creator"
+  Value = "Ramon"
 
+  [tags.beta]
+  Key = "Purpose"
+  Value = "test"

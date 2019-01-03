@@ -10,16 +10,11 @@ import (
 )
 
 func main() {
-	file := os.Args[1]
-	fmt.Println(file)
-	Region, keys, values := L.ReadFile(file)
-	fmt.Println(Region[0])
-	fmt.Println(keys)
-	fmt.Println(values)
-	region := os.Args[2]
-	key := os.Args[3]
+	
+	region := os.Args[1]
+	key := os.Args[2]
 	key = "tag:" + key
-	value := os.Args[4]
+	value := os.Args[3]
 	//file := os.Args[1]
 	// Session
 	sess, err := session.NewSession(&aws.Config{
@@ -45,7 +40,6 @@ func main() {
 	} else {
 		fmt.Println(result)
 	}
-	X, Y, Z := L.ReadFile("/home/ramon/Projects/QuetzalProject/config/config.json")
-	fmt.Println(X, Y, Z)
-
+	//fmt.Println(L.ReadFile("/home/ramon/Projects/quetzal/config/config.toml"))
+	fmt.Println(L.ReadFile("/home/ramon/quetzal/config/config.toml"))
 }
