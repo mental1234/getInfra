@@ -1,0 +1,5 @@
+Vendor = aws
+
+[EC2]
+Region = "us-east-1"
+

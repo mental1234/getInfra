@@ -1,40 +1,40 @@
-// main function for quetzal project
-// First feature is describe instances
 package main
 
 import (
 	"fmt"
-	"os"
 
-	"github.com/aws/aws-sdk-go/aws"
-	"github.com/aws/aws-sdk-go/aws/session"
-	"github.com/aws/aws-sdk-go/service/ec2"
+	"github.com/BurntSushi/toml"
 )
 
-func descInst() {
-	fmt.Println("Hello World")
+type awsConfig struct {
+	Tags map[string]tagsArray 
+	Servers map[string]server
+}
+
+type tagsArray struct {
+	Key string
+	Value string
+}
+
+type server struct {
+	IP string
+	DC string
 }
 
 func main() {
-	instanceAws := os.Args[1]
-	// Session
-	sess, err := session.NewSession(&aws.Config{
-		Region: aws.String("us-east-1")},
-	)
-	// Create EC2 service client
-	svc := ec2.New(sess)
-	// Input
-	input := &ec2.DescribeInstancesInput{
-		InstanceIds: []*string{
-			aws.String(instanceAws),
-		},
+	var config awsConfig
+	if _, err := toml.DecodeFile("config.toml", &config); err != nil {
+		fmt.Println(err)
+		return
 	}
-	// Describe instances
-	result, err := svc.DescribeInstances(input)
-	if err != nil {
-		fmt.Println("Error: ", err)
-	} else {
-		fmt.Println("Sucess ", result)
-		descInst()
+
+	for tag, tagsArray := range config.Tags {
+		fmt.Printf("Server: %s (%s, %s)\n", tag, tagsArray.Key, tagsArray.Value)
 	}
+
+	for serverName, server := range config.Servers {
+		fmt.Printf("Server: %s (%s, %s)\n", serverName, server.IP, server.DC)
+	}
+	
 }
+

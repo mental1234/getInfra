@@ -5,15 +5,21 @@ import (
 	"fmt"
 	"os"
 	"github.com/aws/aws-sdk-go/aws"
-        "github.com/aws/aws-sdk-go/aws/session"
-        "github.com/aws/aws-sdk-go/service/ec2"
+	"github.com/aws/aws-sdk-go/aws/session"
+	"github.com/aws/aws-sdk-go/service/ec2"
 )
 
 func main() {
-	region := os.Args[1]
-	key := os.Args[2]
+	file := os.Args[1]
+	fmt.Println(file)
+	Region, keys, values := L.ReadFile(file)
+	fmt.Println(Region[0])
+	fmt.Println(keys)
+	fmt.Println(values)
+	region := os.Args[2]
+	key := os.Args[3]
 	key = "tag:" + key
-	value := os.Args[3]
+	value := os.Args[4]
 	//file := os.Args[1]
 	// Session
 	sess, err := session.NewSession(&aws.Config{

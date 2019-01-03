@@ -1,4 +1,4 @@
-// read toml configuration files
+// read json configuration files
 package lib
 
 import (
