@@ -1,1 +1,6 @@
+# Gitignore 
+# Remove 
 bin/
+
+## Swap File
+*.swp
