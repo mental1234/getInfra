@@ -40,6 +40,7 @@ func main() {
 	} else {
 		fmt.Println(result)
 	}
-	//fmt.Println(L.ReadFile("/home/ramon/Projects/quetzal/config/config.toml"))
-	fmt.Println(L.ReadFile("/home/ramon/quetzal/config/config.toml"))
+	X := L.ReadFile("/home/ramon/Projects/quetzal/config/config.toml")
+	fmt.Println(X)
+	fmt.Println(L.ReadFile("/home/ramon/Projects/quetzal/config/config.toml"))
 }

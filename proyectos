@@ -28,12 +28,14 @@ long_line_behaviour=1
 long_line_column=72
 
 [files]
-current_page=0
-FILE_NAME_0=497;Go;0;EUTF-8;1;1;0;%2Fhome%2Framon%2FProjects%2FQuetzalProject%2Ftesting_programs%2Fmain.go;0;4
-FILE_NAME_1=96;None;0;EUTF-8;1;1;0;%2Fhome%2Framon%2FProjects%2FQuetzalProject%2Ftesting_programs%2Fconfig.toml;0;4
+current_page=1
+FILE_NAME_0=202;Go;0;EUTF-8;1;1;0;%2Fhome%2Framon%2FProjects%2Fquetzal%2Flib%2FreadToml.go;0;4
+FILE_NAME_1=871;Go;0;EUTF-8;1;1;0;%2Fhome%2Framon%2FProjects%2Fquetzal%2Fmain.go;0;4
+FILE_NAME_2=0;None;0;EUTF-8;1;1;0;%2Fhome%2Framon%2FProjects%2Fquetzal%2Fconfig%2Fconfig.toml;0;4
+FILE_NAME_3=382;Go;0;EUTF-8;1;1;0;%2Fhome%2Framon%2FProjects%2Fquetzal%2Ftesting_programs%2Fmain.go;0;4
 
 [VTE]
-last_dir=/home/ramon/Projects/QuetzalProject
+last_dir=/home/ramon/Projects
 
 [build-menu]
 NF_00_LB=_Compilar
