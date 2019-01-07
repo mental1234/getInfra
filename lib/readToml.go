@@ -14,16 +14,15 @@ type tagsArray struct {
 	Value string
 }
 
-func ReadFile(argFile string) map[string]tagsArray{
+func ReadFile(argFile string) map[string]string{
 	var config awsConfig
 	if _, err := toml.DecodeFile(argFile, &config); err != nil {
 		fmt.Println(err)
 	}
-	
-	for tag, tagsArray := range config.Tags {
-		fmt.Printf("Server: %s (%s, %s)\n", tag, tagsArray.Key, tagsArray.Value)
-		
+	var mapTags = make(map[string]string)
+	for  _, tagsArray := range config.Tags {
+		mapTags[tagsArray.Key] = tagsArray.Value
 	}
-	return config.Tags
+	return mapTags
 
 }
