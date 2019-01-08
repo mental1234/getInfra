@@ -1,9 +1,14 @@
+Region = "us-east-1"
 [Tags]
-
-  [tags.alpha]
+  
+  [tags.creator]
   Key = "Creator"
   Value = "Ramon"
 
   [tags.beta]
   Key = "Purpose"
   Value = "test"
+  
+  [tags.delta]
+  Key = "Dog"
+  Value = "Cat"

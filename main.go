@@ -41,7 +41,8 @@ func main() {
 		fmt.Println(result)
 	}
 //	X := L.ReadFile("/home/ramon/Projects/quetzal/config/config.toml")
-	X := L.ReadFile("/home/ramon/quetzal/config/config.toml")
+	Region, X := L.ReadFile("/home/ramon/quetzal/config/config.toml")
+	fmt.Println(Region)
 	fmt.Println(X)
 	for key, value := range X {
 		fmt.Println("Key: ", key, "Value: ", value)
