@@ -1,7 +1,7 @@
 package main
 
 import (
-	L "./lib"
+	FTOML "./lib"
 	"fmt"
 	"os"
 	"github.com/aws/aws-sdk-go/aws"
@@ -9,44 +9,42 @@ import (
 	"github.com/aws/aws-sdk-go/service/ec2"
 )
 
-func main() {
-	
-	region := os.Args[1]
-	key := os.Args[2]
-	key = "tag:" + key
-	value := os.Args[3]
-	//file := os.Args[1]
+
+func awsArg(region string, tagKey string, tagValue string) {
+	tagKey = "tag:" + tagKey
+	fmt.Println(region, tagKey, tagValue)
 	// Session
-	sess, err := session.NewSession(&aws.Config{
+	sess, _ := session.NewSession(&aws.Config{
 		Region: aws.String(region)},
 	)
-	// Create EC2 service client
+	// Create EC2 Service client
 	svc := ec2.New(sess)
-
 	input := &ec2.DescribeInstancesInput{
-    		Filters: []*ec2.Filter{
-        	{
-            		Name: aws.String(key),
-            			Values: []*string{
-                		aws.String(value),
-            			},
-        		},
-    		},
+		Filters: []*ec2.Filter{
+		{
+			Name: aws.String(tagKey),
+				Values: []*string{
+				aws.String(tagValue),
+				},
+			},
+		},
 	}
-
 	result, err := svc.DescribeInstances(input)
 	if err != nil {
-		fmt.Println("Error: ", err)
-	} else {
-		fmt.Println(result)
-	}
-//	X := L.ReadFile("/home/ramon/Projects/quetzal/config/config.toml")
-	Region, X := L.ReadFile("/home/ramon/quetzal/config/config.toml")
-	fmt.Println(Region)
-	fmt.Println(X)
-	for key, value := range X {
+                fmt.Println("Error: ", err)
+        } else {
+                fmt.Println(result)
+        }
+}
+
+func main() {
+	File := os.Args[1]
+	region, Tags := FTOML.ReadFile(File)
+
+	fmt.Println(region)
+	fmt.Println(Tags)
+	for key, value := range Tags {
 		fmt.Println("Key: ", key, "Value: ", value)
+		awsArg(region, key, value)
 	}
-//	fmt.Println(L.ReadFile("/home/ramon/Projects/quetzal/config/config.toml"))
-//	fmt.Println(L.ReadFile("/home/ramon/quetzal/config/config.toml"))
 }

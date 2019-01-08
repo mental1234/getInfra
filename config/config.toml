@@ -1,14 +1,18 @@
 Region = "us-east-1"
 [Tags]
   
-  [tags.creator]
+  [tags.alpha]
   Key = "Creator"
-  Value = "Ramon"
+  Value = "ramon"
 
   [tags.beta]
-  Key = "Purpose"
-  Value = "test"
+  Key = "Creator"
+  Value = "german"
   
   [tags.delta]
-  Key = "Dog"
-  Value = "Cat"
+  Key = "cost:group"
+  Value = "backlot"
+  
+  [tags.gamma]
+  Key = "Creator"
+  Value = "yoshio"
