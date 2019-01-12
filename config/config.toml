@@ -3,16 +3,16 @@ Region = "us-east-1"
   
   [tags.alpha]
   Key = "Creator"
-  Value = "ramon"
+  Value = "Ramon"
 
   [tags.beta]
-  Key = "Creator"
-  Value = "german"
+  Key = "purpose"
+  Value = "test"
   
   [tags.delta]
   Key = "cost:group"
   Value = "backlot"
   
   [tags.gamma]
-  Key = "Creator"
+  Key = "dummie"
   Value = "yoshio"

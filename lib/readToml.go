@@ -20,13 +20,10 @@ func ReadFile(argFile string) (string, map[string]string) {
 	if _, err := toml.DecodeFile(argFile, &config); err != nil {
 		fmt.Println(err)
 	}
-
 	var mapTags = make(map[string]string)
-	for  tag, tagsArray := range config.Tags {
+	for  _, tagsArray := range config.Tags {
 		mapTags[tagsArray.Key] = tagsArray.Value
-		fmt.Println(tag, tagsArray.Key, tagsArray.Value)
 	}
-	fmt.Println(mapTags)
 	return config.Region, mapTags
 
 }

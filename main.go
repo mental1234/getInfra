@@ -12,7 +12,6 @@ import (
 
 func awsArg(region string, tagKey string, tagValue string) {
 	tagKey = "tag:" + tagKey
-	fmt.Println(region, tagKey, tagValue)
 	// Session
 	sess, _ := session.NewSession(&aws.Config{
 		Region: aws.String(region)},
@@ -41,8 +40,7 @@ func main() {
 	File := os.Args[1]
 	region, Tags := FTOML.ReadFile(File)
 
-	fmt.Println(region)
-	fmt.Println(Tags)
+	//fmt.Println(region)
 	for key, value := range Tags {
 		fmt.Println("Key: ", key, "Value: ", value)
 		awsArg(region, key, value)
