@@ -15,6 +15,11 @@ type tagsArray struct {
 	Value string
 }
 
+type S3Array struct {
+	Key string
+	Value string
+}
+
 func ReadFile(argFile string) (string, map[string]string) {
 	var config awsConfig
 	if _, err := toml.DecodeFile(argFile, &config); err != nil {
