@@ -20,7 +20,7 @@ type S3Array struct {
 	Value string
 }
 
-func ReadFile(argFile string) (string, map[string]string) {
+func ReadEC2(argFile string) (string, map[string]string) {
 	var config awsConfig
 	if _, err := toml.DecodeFile(argFile, &config); err != nil {
 		fmt.Println(err)

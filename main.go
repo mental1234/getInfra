@@ -9,7 +9,7 @@ import (
 
 func main() {
 	File := os.Args[1]
-	region, Tags := FTOML.ReadFile(File)
+	region, Tags := FTOML.ReadEC2(File)
 
 	for key, value := range Tags {
 		fmt.Println("Key: ", key, "Value: ", value)
