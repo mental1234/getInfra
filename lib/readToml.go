@@ -30,5 +30,4 @@ func ReadEC2(argFile string) (string, map[string]string) {
 		mapTags[tagsArray.Key] = tagsArray.Value
 	}
 	return config.Region, mapTags
-
 }
