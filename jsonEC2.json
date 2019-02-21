@@ -1,0 +1,536 @@
+Key:  user Value:  ramon
+{
+  Reservations: [{
+      Instances: [
+        {
+          AmiLaunchIndex: 0,
+          Architecture: "arm64",
+          BlockDeviceMappings: [{
+              DeviceName: "/dev/sda1",
+              Ebs: {
+                AttachTime: 2019-02-21 18:06:19 +0000 UTC,
+                DeleteOnTermination: true,
+                Status: "attached",
+                VolumeId: "vol-0a22e903f7537a13e"
+              }
+            }],
+          CapacityReservationSpecification: {
+            CapacityReservationPreference: "open"
+          },
+          ClientToken: "",
+          CpuOptions: {
+            CoreCount: 1,
+            ThreadsPerCore: 1
+          },
+          EbsOptimized: true,
+          EnaSupport: true,
+          HibernationOptions: {
+            Configured: false
+          },
+          Hypervisor: "xen",
+          ImageId: "ami-01ac7d9c1179d7b74",
+          InstanceId: "i-04fab8a4254da95dc",
+          InstanceType: "a1.medium",
+          KeyName: "ramon",
+          LaunchTime: 2019-02-21 18:06:18 +0000 UTC,
+          Monitoring: {
+            State: "disabled"
+          },
+          NetworkInterfaces: [{
+              Association: {
+                IpOwnerId: "amazon",
+                PublicDnsName: "ec2-54-196-150-100.compute-1.amazonaws.com",
+                PublicIp: "54.196.150.100"
+              },
+              Attachment: {
+                AttachTime: 2019-02-21 18:06:18 +0000 UTC,
+                AttachmentId: "eni-attach-0f94b192bb096cf1e",
+                DeleteOnTermination: true,
+                DeviceIndex: 0,
+                Status: "attached"
+              },
+              Description: "",
+              Groups: [{
+                  GroupId: "sg-0009e01e7429d8f57",
+                  GroupName: "launch-wizard-1"
+                }],
+              MacAddress: "0a:83:07:9f:11:ba",
+              NetworkInterfaceId: "eni-0909eb41d8393a360",
+              OwnerId: "650586824767",
+              PrivateDnsName: "ip-172-31-24-7.ec2.internal",
+              PrivateIpAddress: "172.31.24.7",
+              PrivateIpAddresses: [{
+                  Association: {
+                    IpOwnerId: "amazon",
+                    PublicDnsName: "ec2-54-196-150-100.compute-1.amazonaws.com",
+                    PublicIp: "54.196.150.100"
+                  },
+                  Primary: true,
+                  PrivateDnsName: "ip-172-31-24-7.ec2.internal",
+                  PrivateIpAddress: "172.31.24.7"
+                }],
+              SourceDestCheck: true,
+              Status: "in-use",
+              SubnetId: "subnet-983421d3",
+              VpcId: "vpc-e4926b9f"
+            }],
+          Placement: {
+            AvailabilityZone: "us-east-1a",
+            GroupName: "",
+            Tenancy: "default"
+          },
+          PrivateDnsName: "ip-172-31-24-7.ec2.internal",
+          PrivateIpAddress: "172.31.24.7",
+          PublicDnsName: "ec2-54-196-150-100.compute-1.amazonaws.com",
+          PublicIpAddress: "54.196.150.100",
+          RootDeviceName: "/dev/sda1",
+          RootDeviceType: "ebs",
+          SecurityGroups: [{
+              GroupId: "sg-0009e01e7429d8f57",
+              GroupName: "launch-wizard-1"
+            }],
+          SourceDestCheck: true,
+          State: {
+            Code: 16,
+            Name: "running"
+          },
+          StateTransitionReason: "",
+          SubnetId: "subnet-983421d3",
+          Tags: [{
+              Key: "user",
+              Value: "ramon"
+            },{
+              Key: "env",
+              Value: "test"
+            }],
+          VirtualizationType: "hvm",
+          VpcId: "vpc-e4926b9f"
+        },
+        {
+          AmiLaunchIndex: 1,
+          Architecture: "arm64",
+          BlockDeviceMappings: [{
+              DeviceName: "/dev/sda1",
+              Ebs: {
+                AttachTime: 2019-02-21 18:06:19 +0000 UTC,
+                DeleteOnTermination: true,
+                Status: "attached",
+                VolumeId: "vol-0db0d049f899a6238"
+              }
+            }],
+          CapacityReservationSpecification: {
+            CapacityReservationPreference: "open"
+          },
+          ClientToken: "",
+          CpuOptions: {
+            CoreCount: 1,
+            ThreadsPerCore: 1
+          },
+          EbsOptimized: true,
+          EnaSupport: true,
+          HibernationOptions: {
+            Configured: false
+          },
+          Hypervisor: "xen",
+          ImageId: "ami-01ac7d9c1179d7b74",
+          InstanceId: "i-07a34ca293b0b8369",
+          InstanceType: "a1.medium",
+          KeyName: "ramon",
+          LaunchTime: 2019-02-21 18:06:18 +0000 UTC,
+          Monitoring: {
+            State: "disabled"
+          },
+          NetworkInterfaces: [{
+              Association: {
+                IpOwnerId: "amazon",
+                PublicDnsName: "ec2-54-92-223-60.compute-1.amazonaws.com",
+                PublicIp: "54.92.223.60"
+              },
+              Attachment: {
+                AttachTime: 2019-02-21 18:06:18 +0000 UTC,
+                AttachmentId: "eni-attach-04b88497c53dbf77c",
+                DeleteOnTermination: true,
+                DeviceIndex: 0,
+                Status: "attached"
+              },
+              Description: "",
+              Groups: [{
+                  GroupId: "sg-0009e01e7429d8f57",
+                  GroupName: "launch-wizard-1"
+                }],
+              MacAddress: "0a:c4:c7:1f:a9:76",
+              NetworkInterfaceId: "eni-085287d88ec137873",
+              OwnerId: "650586824767",
+              PrivateDnsName: "ip-172-31-27-237.ec2.internal",
+              PrivateIpAddress: "172.31.27.237",
+              PrivateIpAddresses: [{
+                  Association: {
+                    IpOwnerId: "amazon",
+                    PublicDnsName: "ec2-54-92-223-60.compute-1.amazonaws.com",
+                    PublicIp: "54.92.223.60"
+                  },
+                  Primary: true,
+                  PrivateDnsName: "ip-172-31-27-237.ec2.internal",
+                  PrivateIpAddress: "172.31.27.237"
+                }],
+              SourceDestCheck: true,
+              Status: "in-use",
+              SubnetId: "subnet-983421d3",
+              VpcId: "vpc-e4926b9f"
+            }],
+          Placement: {
+            AvailabilityZone: "us-east-1a",
+            GroupName: "",
+            Tenancy: "default"
+          },
+          PrivateDnsName: "ip-172-31-27-237.ec2.internal",
+          PrivateIpAddress: "172.31.27.237",
+          PublicDnsName: "ec2-54-92-223-60.compute-1.amazonaws.com",
+          PublicIpAddress: "54.92.223.60",
+          RootDeviceName: "/dev/sda1",
+          RootDeviceType: "ebs",
+          SecurityGroups: [{
+              GroupId: "sg-0009e01e7429d8f57",
+              GroupName: "launch-wizard-1"
+            }],
+          SourceDestCheck: true,
+          State: {
+            Code: 16,
+            Name: "running"
+          },
+          StateTransitionReason: "",
+          SubnetId: "subnet-983421d3",
+          Tags: [{
+              Key: "user",
+              Value: "ramon"
+            },{
+              Key: "env",
+              Value: "prod"
+            }],
+          VirtualizationType: "hvm",
+          VpcId: "vpc-e4926b9f"
+        },
+        {
+          AmiLaunchIndex: 2,
+          Architecture: "arm64",
+          BlockDeviceMappings: [{
+              DeviceName: "/dev/sda1",
+              Ebs: {
+                AttachTime: 2019-02-21 18:06:19 +0000 UTC,
+                DeleteOnTermination: true,
+                Status: "attached",
+                VolumeId: "vol-0f41866ee10f1aea0"
+              }
+            }],
+          CapacityReservationSpecification: {
+            CapacityReservationPreference: "open"
+          },
+          ClientToken: "",
+          CpuOptions: {
+            CoreCount: 1,
+            ThreadsPerCore: 1
+          },
+          EbsOptimized: true,
+          EnaSupport: true,
+          HibernationOptions: {
+            Configured: false
+          },
+          Hypervisor: "xen",
+          ImageId: "ami-01ac7d9c1179d7b74",
+          InstanceId: "i-07c5ed19958c918b0",
+          InstanceType: "a1.medium",
+          KeyName: "ramon",
+          LaunchTime: 2019-02-21 18:06:18 +0000 UTC,
+          Monitoring: {
+            State: "disabled"
+          },
+          NetworkInterfaces: [{
+              Association: {
+                IpOwnerId: "amazon",
+                PublicDnsName: "ec2-54-221-19-112.compute-1.amazonaws.com",
+                PublicIp: "54.221.19.112"
+              },
+              Attachment: {
+                AttachTime: 2019-02-21 18:06:18 +0000 UTC,
+                AttachmentId: "eni-attach-01ca1cc4d904bfff0",
+                DeleteOnTermination: true,
+                DeviceIndex: 0,
+                Status: "attached"
+              },
+              Description: "",
+              Groups: [{
+                  GroupId: "sg-0009e01e7429d8f57",
+                  GroupName: "launch-wizard-1"
+                }],
+              MacAddress: "0a:19:9d:eb:6f:7a",
+              NetworkInterfaceId: "eni-0a9b671ac1fccf604",
+              OwnerId: "650586824767",
+              PrivateDnsName: "ip-172-31-29-62.ec2.internal",
+              PrivateIpAddress: "172.31.29.62",
+              PrivateIpAddresses: [{
+                  Association: {
+                    IpOwnerId: "amazon",
+                    PublicDnsName: "ec2-54-221-19-112.compute-1.amazonaws.com",
+                    PublicIp: "54.221.19.112"
+                  },
+                  Primary: true,
+                  PrivateDnsName: "ip-172-31-29-62.ec2.internal",
+                  PrivateIpAddress: "172.31.29.62"
+                }],
+              SourceDestCheck: true,
+              Status: "in-use",
+              SubnetId: "subnet-983421d3",
+              VpcId: "vpc-e4926b9f"
+            }],
+          Placement: {
+            AvailabilityZone: "us-east-1a",
+            GroupName: "",
+            Tenancy: "default"
+          },
+          PrivateDnsName: "ip-172-31-29-62.ec2.internal",
+          PrivateIpAddress: "172.31.29.62",
+          PublicDnsName: "ec2-54-221-19-112.compute-1.amazonaws.com",
+          PublicIpAddress: "54.221.19.112",
+          RootDeviceName: "/dev/sda1",
+          RootDeviceType: "ebs",
+          SecurityGroups: [{
+              GroupId: "sg-0009e01e7429d8f57",
+              GroupName: "launch-wizard-1"
+            }],
+          SourceDestCheck: true,
+          State: {
+            Code: 16,
+            Name: "running"
+          },
+          StateTransitionReason: "",
+          SubnetId: "subnet-983421d3",
+          Tags: [{
+              Key: "env",
+              Value: "prod"
+            },{
+              Key: "user",
+              Value: "ramon"
+            }],
+          VirtualizationType: "hvm",
+          VpcId: "vpc-e4926b9f"
+        },
+        {
+          AmiLaunchIndex: 3,
+          Architecture: "arm64",
+          BlockDeviceMappings: [{
+              DeviceName: "/dev/sda1",
+              Ebs: {
+                AttachTime: 2019-02-21 18:06:19 +0000 UTC,
+                DeleteOnTermination: true,
+                Status: "attached",
+                VolumeId: "vol-00ce6428c00dee00c"
+              }
+            }],
+          CapacityReservationSpecification: {
+            CapacityReservationPreference: "open"
+          },
+          ClientToken: "",
+          CpuOptions: {
+            CoreCount: 1,
+            ThreadsPerCore: 1
+          },
+          EbsOptimized: true,
+          EnaSupport: true,
+          HibernationOptions: {
+            Configured: false
+          },
+          Hypervisor: "xen",
+          ImageId: "ami-01ac7d9c1179d7b74",
+          InstanceId: "i-0730b38d87fbab5f6",
+          InstanceType: "a1.medium",
+          KeyName: "ramon",
+          LaunchTime: 2019-02-21 18:06:18 +0000 UTC,
+          Monitoring: {
+            State: "disabled"
+          },
+          NetworkInterfaces: [{
+              Association: {
+                IpOwnerId: "amazon",
+                PublicDnsName: "ec2-3-89-106-23.compute-1.amazonaws.com",
+                PublicIp: "3.89.106.23"
+              },
+              Attachment: {
+                AttachTime: 2019-02-21 18:06:18 +0000 UTC,
+                AttachmentId: "eni-attach-0f3f7bf88616ea910",
+                DeleteOnTermination: true,
+                DeviceIndex: 0,
+                Status: "attached"
+              },
+              Description: "",
+              Groups: [{
+                  GroupId: "sg-0009e01e7429d8f57",
+                  GroupName: "launch-wizard-1"
+                }],
+              MacAddress: "0a:52:6a:4a:5b:08",
+              NetworkInterfaceId: "eni-0856212b60fe0577c",
+              OwnerId: "650586824767",
+              PrivateDnsName: "ip-172-31-18-126.ec2.internal",
+              PrivateIpAddress: "172.31.18.126",
+              PrivateIpAddresses: [{
+                  Association: {
+                    IpOwnerId: "amazon",
+                    PublicDnsName: "ec2-3-89-106-23.compute-1.amazonaws.com",
+                    PublicIp: "3.89.106.23"
+                  },
+                  Primary: true,
+                  PrivateDnsName: "ip-172-31-18-126.ec2.internal",
+                  PrivateIpAddress: "172.31.18.126"
+                }],
+              SourceDestCheck: true,
+              Status: "in-use",
+              SubnetId: "subnet-983421d3",
+              VpcId: "vpc-e4926b9f"
+            }],
+          Placement: {
+            AvailabilityZone: "us-east-1a",
+            GroupName: "",
+            Tenancy: "default"
+          },
+          PrivateDnsName: "ip-172-31-18-126.ec2.internal",
+          PrivateIpAddress: "172.31.18.126",
+          PublicDnsName: "ec2-3-89-106-23.compute-1.amazonaws.com",
+          PublicIpAddress: "3.89.106.23",
+          RootDeviceName: "/dev/sda1",
+          RootDeviceType: "ebs",
+          SecurityGroups: [{
+              GroupId: "sg-0009e01e7429d8f57",
+              GroupName: "launch-wizard-1"
+            }],
+          SourceDestCheck: true,
+          State: {
+            Code: 16,
+            Name: "running"
+          },
+          StateTransitionReason: "",
+          SubnetId: "subnet-983421d3",
+          Tags: [{
+              Key: "env",
+              Value: "dev"
+            },{
+              Key: "user",
+              Value: "ramon"
+            }],
+          VirtualizationType: "hvm",
+          VpcId: "vpc-e4926b9f"
+        }
+      ],
+      OwnerId: "650586824767",
+      ReservationId: "r-03b68266246af1388"
+    }]
+}
+Key:  env Value:  test
+{
+  Reservations: [{
+      Instances: [{
+          AmiLaunchIndex: 0,
+          Architecture: "arm64",
+          BlockDeviceMappings: [{
+              DeviceName: "/dev/sda1",
+              Ebs: {
+                AttachTime: 2019-02-21 18:06:19 +0000 UTC,
+                DeleteOnTermination: true,
+                Status: "attached",
+                VolumeId: "vol-0a22e903f7537a13e"
+              }
+            }],
+          CapacityReservationSpecification: {
+            CapacityReservationPreference: "open"
+          },
+          ClientToken: "",
+          CpuOptions: {
+            CoreCount: 1,
+            ThreadsPerCore: 1
+          },
+          EbsOptimized: true,
+          EnaSupport: true,
+          HibernationOptions: {
+            Configured: false
+          },
+          Hypervisor: "xen",
+          ImageId: "ami-01ac7d9c1179d7b74",
+          InstanceId: "i-04fab8a4254da95dc",
+          InstanceType: "a1.medium",
+          KeyName: "ramon",
+          LaunchTime: 2019-02-21 18:06:18 +0000 UTC,
+          Monitoring: {
+            State: "disabled"
+          },
+          NetworkInterfaces: [{
+              Association: {
+                IpOwnerId: "amazon",
+                PublicDnsName: "ec2-54-196-150-100.compute-1.amazonaws.com",
+                PublicIp: "54.196.150.100"
+              },
+              Attachment: {
+                AttachTime: 2019-02-21 18:06:18 +0000 UTC,
+                AttachmentId: "eni-attach-0f94b192bb096cf1e",
+                DeleteOnTermination: true,
+                DeviceIndex: 0,
+                Status: "attached"
+              },
+              Description: "",
+              Groups: [{
+                  GroupId: "sg-0009e01e7429d8f57",
+                  GroupName: "launch-wizard-1"
+                }],
+              MacAddress: "0a:83:07:9f:11:ba",
+              NetworkInterfaceId: "eni-0909eb41d8393a360",
+              OwnerId: "650586824767",
+              PrivateDnsName: "ip-172-31-24-7.ec2.internal",
+              PrivateIpAddress: "172.31.24.7",
+              PrivateIpAddresses: [{
+                  Association: {
+                    IpOwnerId: "amazon",
+                    PublicDnsName: "ec2-54-196-150-100.compute-1.amazonaws.com",
+                    PublicIp: "54.196.150.100"
+                  },
+                  Primary: true,
+                  PrivateDnsName: "ip-172-31-24-7.ec2.internal",
+                  PrivateIpAddress: "172.31.24.7"
+                }],
+              SourceDestCheck: true,
+              Status: "in-use",
+              SubnetId: "subnet-983421d3",
+              VpcId: "vpc-e4926b9f"
+            }],
+          Placement: {
+            AvailabilityZone: "us-east-1a",
+            GroupName: "",
+            Tenancy: "default"
+          },
+          PrivateDnsName: "ip-172-31-24-7.ec2.internal",
+          PrivateIpAddress: "172.31.24.7",
+          PublicDnsName: "ec2-54-196-150-100.compute-1.amazonaws.com",
+          PublicIpAddress: "54.196.150.100",
+          RootDeviceName: "/dev/sda1",
+          RootDeviceType: "ebs",
+          SecurityGroups: [{
+              GroupId: "sg-0009e01e7429d8f57",
+              GroupName: "launch-wizard-1"
+            }],
+          SourceDestCheck: true,
+          State: {
+            Code: 16,
+            Name: "running"
+          },
+          StateTransitionReason: "",
+          SubnetId: "subnet-983421d3",
+          Tags: [{
+              Key: "user",
+              Value: "ramon"
+            },{
+              Key: "env",
+              Value: "test"
+            }],
+          VirtualizationType: "hvm",
+          VpcId: "vpc-e4926b9f"
+        }],
+      OwnerId: "650586824767",
+      ReservationId: "r-03b68266246af1388"
+    }]
+}
