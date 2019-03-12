@@ -25,10 +25,11 @@ func AwsArg(region string, tagKey string, tagValue string) {
 			},
 		},
 	}
-	result, err := svc.DescribeInstances(input)
-	if err != nil {
-                fmt.Println("Error: ", err)
-        } else {
-                fmt.Println(result)
+	result, _ := svc.DescribeInstances(input)
+    
+    for _, reservation := range result.Reservations {
+        for _, instance := range reservation.Instances {
+            fmt.Println(*instance.InstanceId)
         }
+    }
 }

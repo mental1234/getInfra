@@ -3,4 +3,4 @@ Region = "us-east-1"
 
   [tags.beta]
   Key = "env"
-  Value = "test"
+  Value = "prod"
