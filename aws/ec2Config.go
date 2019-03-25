@@ -1,12 +1,13 @@
 package aws
 
 import (
+    //"fmt"
 	"github.com/aws/aws-sdk-go/aws"
 	"github.com/aws/aws-sdk-go/aws/session"
 	"github.com/aws/aws-sdk-go/service/ec2"
 )
 
-func AwsArg(region string, tagKey string, tagValue string) ([]string) {
+func AwsArg(region string, tagKey string, tagValue string) (map[string][]string) {
 	tagKey = "tag:" + tagKey
 	// Session
 	sess, _ := session.NewSession(&aws.Config{
@@ -25,11 +26,17 @@ func AwsArg(region string, tagKey string, tagValue string) ([]string) {
 		},
 	}
 	result, _ := svc.DescribeInstances(input)
-    var instanceIDS []string
+    var infoEC2 []string
+    var instanceMap = make(map[string][]string)
     for _, reservation := range result.Reservations {
         for _, instance := range reservation.Instances {
-            instanceIDS = append(instanceIDS, *instance.InstanceId)
+            
+            if len(infoEC2) > 0 {
+                infoEC2 = nil
+            }
+            infoEC2 = append(infoEC2, *instance.ImageId, *instance.InstanceType )
+            instanceMap[*instance.InstanceId] = infoEC2
         }
     }
-    return instanceIDS
+    return instanceMap
 }

@@ -10,10 +10,11 @@ import (
 func main() {
 	File := os.Args[1]
 	region, Tags := FTOML.ReadEC2(File)
+    //var mapaEC2 = make(map[string][]string)
 
 	for key, value := range Tags {
 		fmt.Println("Key: ", key, "Value: ", value)
-		a := AWSPR.AwsArg(region, key, value)
-        fmt.Println(a)
+        
+        fmt.Println(AWSPR.AwsArg(region, key, value))
 	}
 }
