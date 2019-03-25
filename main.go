@@ -13,6 +13,7 @@ func main() {
 
 	for key, value := range Tags {
 		fmt.Println("Key: ", key, "Value: ", value)
-		AWSPR.AwsArg(region, key, value)
+		a := AWSPR.AwsArg(region, key, value)
+        fmt.Println(a)
 	}
 }

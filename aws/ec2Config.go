@@ -1,13 +1,12 @@
 package aws
 
 import (
-	"fmt"
 	"github.com/aws/aws-sdk-go/aws"
 	"github.com/aws/aws-sdk-go/aws/session"
 	"github.com/aws/aws-sdk-go/service/ec2"
 )
 
-func AwsArg(region string, tagKey string, tagValue string) {
+func AwsArg(region string, tagKey string, tagValue string) ([]string) {
 	tagKey = "tag:" + tagKey
 	// Session
 	sess, _ := session.NewSession(&aws.Config{
@@ -26,10 +25,11 @@ func AwsArg(region string, tagKey string, tagValue string) {
 		},
 	}
 	result, _ := svc.DescribeInstances(input)
-    
+    var instanceIDS []string
     for _, reservation := range result.Reservations {
         for _, instance := range reservation.Instances {
-            fmt.Println(*instance.InstanceId)
+            instanceIDS = append(instanceIDS, *instance.InstanceId)
         }
     }
+    return instanceIDS
 }

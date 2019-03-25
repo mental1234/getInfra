@@ -4,3 +4,7 @@ Region = "us-east-1"
   [tags.beta]
   Key = "env"
   Value = "prod"
+  
+  [tags.alpha]
+  Key = "creator"
+  Value = "ramon"
